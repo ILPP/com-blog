@@ -7,11 +7,18 @@
 <script type="text/javascript">
   import Aside from '../aside/aside.vue'
   import Content from '../content/content'
+  import { backBlog } from '@/api/api'
   export default {
     name: 'com',
     components: {
       Aside,
       Content
+    },
+    created() {
+      backBlog()
+      .then(res => {
+        console.log(res)
+      })
     }
   }
 </script>

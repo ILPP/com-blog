@@ -7,6 +7,9 @@ import './common/sass/index.scss'
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 import hljs from 'highlight.js'
+import axios from 'axios'
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+
 //封装成一个指令
 Vue.directive('highlight', (el) => {
     let blocks = el.querySelectorAll('pre code')
